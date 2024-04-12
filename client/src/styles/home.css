@@ -1,0 +1,175 @@
+#middle-button {
+    min-width: 50%;
+    height: 40px;
+    font-size: larger;
+    background-color: black;
+    color: white;
+    border: 1px solid;
+    margin-right: 20%;
+}
+
+#left-button {
+    height: 40px;
+    min-width: 10%;
+    font-size: large;
+    background-color: white;
+    border: 1px solid white;
+}
+
+#right-button {
+    height: 40px;
+    min-width: 10%;
+    font-size: large;
+    background-color: black;
+    border: 1px solid;
+    color: white;
+}
+
+#buttons-container {
+    margin-left: 30%;
+    min-width: 463px;
+    margin-top: -55px;
+}
+
+#logo {
+    font-family: FreeMono, monospace;
+    margin-left: 5%;
+}
+#logo:hover {
+    cursor: pointer;
+}
+
+#moto {
+    width: 304px;
+    margin: auto; 
+    margin-top: 77px; 
+    text-align: center;
+}
+
+#images-container {
+    width: 900px;
+    margin: auto;
+    margin-top: 38px
+}
+
+.image-frame {
+    margin-left: 13px;
+    width: 208.75px;
+    display: inline-block
+}
+
+.image {
+    border-radius: 29px;
+    width: 208.75px; 
+    height: 250px
+}
+
+.image:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+#modal {
+    width: 800px;
+    background-color: white;
+    position: fixed;
+    border-radius: 29px;
+    top: 104px;
+    left: 223px;
+    height: 440px;
+    border: solid 0.5px gray;
+    display: none;
+}
+
+
+
+#modal2 {
+    width: 800px;
+    background-color: white;
+    position: fixed;
+    border-radius: 29px;
+    top: 104px;
+    left: 223px;
+    height: 440px;
+    border: solid 0.5px gray;
+    display: none;
+}
+
+.modal-pic {
+    width: 400px; 
+    height: 400px; 
+    border-radius: 29px; 
+    margin-left: 13px;
+    margin-top: 19px
+}
+
+
+.modal-right-area {
+    margin-left: 479px;
+    margin-top: -18px;
+    width: 261px; 
+    height: 320x
+}
+
+.close {
+    font-Size: 30px; 
+    margin-top: -412px; 
+    margin-left: 766px
+}
+.close:hover {
+    cursor: pointer;
+}
+
+
+.modal-input {
+    height: 40px;
+    font-size: 30px; 
+    font-Weight: "bold";
+    width: 261px
+}
+
+
+#submit-button {
+    height: 40px;
+    width: 80px;
+    font-size: large;
+    background-color: black;
+    border: 1px solid;
+    color: white;
+    margin-left: 101px;
+    margin-top: 18px;
+}
+
+#submit-button:hover {
+    cursor: pointer;
+}
+
+
+
+#save-button {
+    height: 40px;
+    width: 80px;
+    font-size: large;
+    background-color: black;
+    border: 1px solid;
+    color: white;
+    margin-top: 28px;
+    margin-left: 65px;
+}
+
+#save-button:hover {
+    cursor: pointer;
+}
+
+#delete-button {
+    height: 40px;
+    min-width: 10%;
+    font-size: large;
+    background-color: white;
+    border: 1px solid white;
+}
+
+#delete-button {
+    cursor: pointer;
+}
+

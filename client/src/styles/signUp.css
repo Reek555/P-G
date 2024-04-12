@@ -1,0 +1,39 @@
+#form-container {
+    margin: auto;
+    width: 235px;
+    text-align: center;
+    transform: scale(1.2);
+    margin-top: 68px;
+    font-family: "Times New Roman", serif
+
+}
+
+.input {
+    height: 27px;
+    font-size: 17px;
+    padding-left: 5px;
+    border: 1px solid;
+    margin-bottom: 15px;
+}
+
+#button {
+    height: 31px;
+    font-size: 17px;
+    width: 235px;
+    background-color: black;
+    border: 1px solid black; 
+    color: white;
+}
+
+#button:hover {
+    cursor: pointer;
+}
+
+#login-word {
+    text-decoration: underline;
+}
+
+#login-word:hover {
+    cursor: pointer;
+}
+
