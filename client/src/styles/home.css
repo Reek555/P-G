@@ -16,6 +16,8 @@
     border: 1px solid white;
 }
 
+
+
 #right-button {
     height: 40px;
     min-width: 10%;
@@ -35,9 +37,7 @@
     font-family: FreeMono, monospace;
     margin-left: 5%;
 }
-#logo:hover {
-    cursor: pointer;
-}
+
 
 #moto {
     width: 304px;
@@ -64,10 +64,7 @@
     height: 250px
 }
 
-.image:hover {
-    opacity: 0.7;
-    cursor: pointer;
-}
+
 
 #modal {
     width: 800px;
@@ -116,9 +113,7 @@
     margin-top: -412px; 
     margin-left: 766px
 }
-.close:hover {
-    cursor: pointer;
-}
+
 
 
 .modal-input {
@@ -140,9 +135,6 @@
     margin-top: 18px;
 }
 
-#submit-button:hover {
-    cursor: pointer;
-}
 
 
 
@@ -157,9 +149,7 @@
     margin-left: 65px;
 }
 
-#save-button:hover {
-    cursor: pointer;
-}
+
 
 #delete-button {
     height: 40px;
@@ -169,9 +159,7 @@
     border: 1px solid white;
 }
 
-#delete-button {
-    cursor: pointer;
-}
+
 
 textarea {
     resize: none;
@@ -203,5 +191,7 @@ textarea {
     100% { transform: rotate(360deg); }
   }
 
-
+  #left-button, #right-button, #logo, #submit-button, #save-button, #delete-button, .image, .close:hover {
+    cursor: pointer;
+  }
   
