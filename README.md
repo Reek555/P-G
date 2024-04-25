@@ -73,8 +73,8 @@
     <ol data-sourcepos="54:1-61:0">
         <li data-sourcepos="54:1-57:0">
             <p data-sourcepos="54:4-54:29"><strong>Configure Backend URL:</strong></p>
-            <p data-sourcepos="56:4-56:73">Update the backend URL in the <code>config/urls.js</code> file for the React
-                app.</p>
+            <p data-sourcepos="56:4-56:73">Update the backend URL for the React
+                app in envirement variables.</p>
         </li>
         <li data-sourcepos="58:1-61:0">
             <p data-sourcepos="58:4-58:20"><strong>API Requests:</strong></p>
