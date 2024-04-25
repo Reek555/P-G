@@ -1,5 +1,4 @@
 import "../styles/home.css"
-import BASE_URL from '../config/urls';
 import axios from "axios" 
 import { useState, useEffect } from "react";
 import LogIn from "./logIn";
@@ -7,10 +6,13 @@ import Image from "../components/image"
 import Profile from "./profile"
 import SignUp from "./signUp"
 import Modal from "../components/modal"
+import emptyIcon from "../test pictures/335954.png"
 
+const BASE_URL = process.env.REACT_APP_BASE_URL
 
 
 function Home({setPage}) {
+
 
     const [images, setImages] = useState()
     const [visible, setVisible] = useState("none")
@@ -18,6 +20,7 @@ function Home({setPage}) {
     const [description, setDescription] = useState()
     const [modalPic, setModalPic] = useState()
     const [loaderDisplay, setDisplay] = useState("block")
+    const [emptyDisplay, setEmptyDisplay] = useState("none")
 
 
     useEffect (()=> {
@@ -35,6 +38,7 @@ function Home({setPage}) {
         axios.get (`${BASE_URL}/images`)
         .then (
             (res) => {
+
                 let photos = res.data.map(photo =>
                                     <Image 
                                     pic = {photo}
@@ -43,8 +47,13 @@ function Home({setPage}) {
                                     setDescription = {setDescription}
                                     setModalPic = {setModalPic} />
                     )
+                
+                
                 setImages(photos)
                 setDisplay("none")
+                if (photos.length == 0) {
+                    setEmptyDisplay("block")
+                }
             }
         )
     }, [])
@@ -94,7 +103,7 @@ function Home({setPage}) {
         
         
         <div style = {{display: loaderDisplay}} className="loader"></div>
-
+        <img style = {{display: emptyDisplay}} id = "emptyIcon" src = {emptyIcon}></img>
 
         </>
     )
