@@ -194,4 +194,13 @@ textarea {
   #left-button, #right-button, #logo, #submit-button, #save-button, #delete-button, .image, .close:hover {
     cursor: pointer;
   }
+
+  #emptyIcon {
+    position: fixed;
+    top: 265px;
+    left: 586px;
+    height: 100px;
+    width: 100px;
+    z-index: -1;
+  }
   
