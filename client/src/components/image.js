@@ -1,9 +1,10 @@
 import "../styles/home.css"
-import BASE_URL from '../config/urls';
 import dislikeIcon from "../test pictures/heart.png"
 import likeIcon from "../test pictures/heart (1).png"
 import axios from "axios" 
 import { useEffect, useState } from "react";
+
+const BASE_URL = process.env.REACT_APP_BASE_URL
 
 
 function ImageX ({pic, setVisible, setTitle, setDescription, setModalPic, userInfo}) {
