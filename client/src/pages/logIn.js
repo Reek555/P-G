@@ -1,7 +1,9 @@
 import "../styles/signUp.css"
 import axios from "axios" 
-import BASE_URL from '../config/urls';
 import { useState} from "react";
+
+const BASE_URL = process.env.REACT_APP_BASE_URL
+
 
 function LogIn ({setPage }) {
     const [email, setEmail]= useState("") 
