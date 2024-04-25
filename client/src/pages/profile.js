@@ -1,10 +1,11 @@
 import "../styles/home.css"
 import dummyPic from "../test pictures/dummy-post-square-1-1.jpg"
-import BASE_URL from '../config/urls';
 import axios from "axios" 
 import { useState, useEffect } from "react";
 import Image from "../components/image"
 import Modal from "../components/modal"
+import emptyIcon from "../test pictures/335954.png"
+const BASE_URL = process.env.REACT_APP_BASE_URL
 
 
 
@@ -26,9 +27,10 @@ function Profile({setPage, userInfo}) {
     const [modalPic, setModalPic] = useState()
     const [moto, setMoto] = useState("Express yourself visually. Be seen.")
     const [loaderDisplay, setDisplay] = useState("block")
+    const [emptyDisplay, setEmptyDisplay] = useState("none")
 
 
- 
+
 
     useEffect (()=> {
         axios.get(`${BASE_URL}/images`)
@@ -45,6 +47,9 @@ function Profile({setPage, userInfo}) {
             )
             setImages(photos)
             setDisplay("none")
+            if (photos.length == 0) {
+                setEmptyDisplay("block")
+            }
 
         })
 
@@ -79,7 +84,9 @@ function Profile({setPage, userInfo}) {
             setImages(photos)
             setMoto(`Hi ${userInfo.user.name}, your uploads will appear here ...`)
             setDisplay ("none")
-
+            if (photos.length == 0) {
+                setEmptyDisplay("block")
+            }
             
         })
     }
@@ -175,6 +182,8 @@ function Profile({setPage, userInfo}) {
             </div>
         </div>
 
+
+
         <div id = "modal" style = {{display: visible2}}>
             <img src = {modalPic} className="modal-pic"></img>
             <p className="close" onClick={() => setVisible2 ("none")}>x</p>
@@ -191,8 +200,7 @@ function Profile({setPage, userInfo}) {
         </div>
 
         <div style = {{display: loaderDisplay}} className="loader"></div>
-
-
+        <img style = {{display: emptyDisplay}} id = "emptyIcon" src = {emptyIcon}></img>
 
         </>
     )
